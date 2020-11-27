@@ -15,13 +15,13 @@ class BaseCoordinator<T: UIViewController>: Coordinator {
     let rootViewController: T
     var child: Coordinator?
     weak var parent: Coordinator?
-    
-    //MARK:- Init
-    
+
+    // MARK: - Init
+
     init(rootViewController: T) {
         self.rootViewController = rootViewController
     }
-    
+
     /// show first view controller
     func start() {
         assertionFailure("child class must override it.")
