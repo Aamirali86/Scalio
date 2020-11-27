@@ -16,6 +16,9 @@
 		2984A63A2571188A0084CE3F /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A6392571188A0084CE3F /* Action */; };
 		2984A64725711FEA0084CE3F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64625711FEA0084CE3F /* HomeViewController.swift */; };
 		2984A64925711FFC0084CE3F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64825711FFC0084CE3F /* DetailViewController.swift */; };
+		2984A64D257125EE0084CE3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64A257125EE0084CE3F /* Coordinator.swift */; };
+		2984A64E257125EE0084CE3F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64B257125EE0084CE3F /* AppCoordinator.swift */; };
+		2984A64F257125EE0084CE3F /* BaseCoordinaotr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		2984A62C2571124A0084CE3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2984A64625711FEA0084CE3F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2984A64825711FFC0084CE3F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		2984A64A257125EE0084CE3F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		2984A64B257125EE0084CE3F /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinaotr.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,9 @@
 			children = (
 				2984A613257112480084CE3F /* AppDelegate.swift */,
 				2984A615257112480084CE3F /* SceneDelegate.swift */,
+				2984A64B257125EE0084CE3F /* AppCoordinator.swift */,
+				2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */,
+				2984A64A257125EE0084CE3F /* Coordinator.swift */,
 			);
 			path = AppSetup;
 			sourceTree = "<group>";
@@ -251,8 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2984A64E257125EE0084CE3F /* AppCoordinator.swift in Sources */,
 				2984A614257112480084CE3F /* AppDelegate.swift in Sources */,
 				2984A616257112480084CE3F /* SceneDelegate.swift in Sources */,
+				2984A64F257125EE0084CE3F /* BaseCoordinaotr.swift in Sources */,
+				2984A64D257125EE0084CE3F /* Coordinator.swift in Sources */,
 				2984A64725711FEA0084CE3F /* HomeViewController.swift in Sources */,
 				2984A64925711FFC0084CE3F /* DetailViewController.swift in Sources */,
 			);
@@ -407,7 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = scalio/Info.plist;
+				INFOPLIST_FILE = scalio/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -425,7 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = scalio/Info.plist;
+				INFOPLIST_FILE = scalio/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
