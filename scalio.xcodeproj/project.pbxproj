@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,10 @@
 		2984A61D2571124A0084CE3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2984A61C2571124A0084CE3F /* Assets.xcassets */; };
 		2984A6202571124A0084CE3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2984A61E2571124A0084CE3F /* LaunchScreen.storyboard */; };
 		2984A62B2571124A0084CE3F /* scalioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A62A2571124A0084CE3F /* scalioTests.swift */; };
+		2984A637257117FD0084CE3F /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A636257117FD0084CE3F /* RxMoya */; };
+		2984A63A2571188A0084CE3F /* Action in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A6392571188A0084CE3F /* Action */; };
+		2984A63D257118EE0084CE3F /* Differentiator in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A63C257118EE0084CE3F /* Differentiator */; };
+		2984A63F257118EE0084CE3F /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A63E257118EE0084CE3F /* RxDataSources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +49,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2984A63A2571188A0084CE3F /* Action in Frameworks */,
+				2984A63F257118EE0084CE3F /* RxDataSources in Frameworks */,
+				2984A63D257118EE0084CE3F /* Differentiator in Frameworks */,
+				2984A637257117FD0084CE3F /* RxMoya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +123,12 @@
 			dependencies = (
 			);
 			name = scalio;
+			packageProductDependencies = (
+				2984A636257117FD0084CE3F /* RxMoya */,
+				2984A6392571188A0084CE3F /* Action */,
+				2984A63C257118EE0084CE3F /* Differentiator */,
+				2984A63E257118EE0084CE3F /* RxDataSources */,
+			);
 			productName = scalio;
 			productReference = 2984A610257112480084CE3F /* scalio.app */;
 			productType = "com.apple.product-type.application";
@@ -165,6 +179,11 @@
 				Base,
 			);
 			mainGroup = 2984A607257112480084CE3F;
+			packageReferences = (
+				2984A635257117FD0084CE3F /* XCRemoteSwiftPackageReference "Moya" */,
+				2984A6382571188A0084CE3F /* XCRemoteSwiftPackageReference "Action" */,
+				2984A63B257118EE0084CE3F /* XCRemoteSwiftPackageReference "RxDataSources" */,
+			);
 			productRefGroup = 2984A611257112480084CE3F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -467,6 +486,56 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2984A635257117FD0084CE3F /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+		2984A6382571188A0084CE3F /* XCRemoteSwiftPackageReference "Action" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/Action";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.0;
+			};
+		};
+		2984A63B257118EE0084CE3F /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2984A636257117FD0084CE3F /* RxMoya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2984A635257117FD0084CE3F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = RxMoya;
+		};
+		2984A6392571188A0084CE3F /* Action */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2984A6382571188A0084CE3F /* XCRemoteSwiftPackageReference "Action" */;
+			productName = Action;
+		};
+		2984A63C257118EE0084CE3F /* Differentiator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2984A63B257118EE0084CE3F /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = Differentiator;
+		};
+		2984A63E257118EE0084CE3F /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2984A63B257118EE0084CE3F /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2984A608257112480084CE3F /* Project object */;
 }
