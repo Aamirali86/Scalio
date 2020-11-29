@@ -14,13 +14,43 @@
                     <view key="view" contentMode="scaleToFill" id="GKg-H0-Na3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFg-wK-geu">
+                                <rect key="frame" x="20" y="84" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OK4-as-Q5C">
+                                <rect key="frame" x="20" y="144.5" width="374" height="180"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="NbK-Fc-8pP"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="tFg-wK-geu" firstAttribute="leading" secondItem="lN6-ma-uah" secondAttribute="leading" constant="20" id="7DP-E6-sIY"/>
+                            <constraint firstItem="OK4-as-Q5C" firstAttribute="top" secondItem="tFg-wK-geu" secondAttribute="bottom" constant="40" id="I2S-u9-Z2T"/>
+                            <constraint firstItem="lN6-ma-uah" firstAttribute="trailing" secondItem="OK4-as-Q5C" secondAttribute="trailing" constant="20" id="OCK-BT-hbm"/>
+                            <constraint firstItem="OK4-as-Q5C" firstAttribute="leading" secondItem="lN6-ma-uah" secondAttribute="leading" constant="20" id="Qdu-dR-0UD"/>
+                            <constraint firstItem="tFg-wK-geu" firstAttribute="top" secondItem="lN6-ma-uah" secondAttribute="top" constant="40" id="bbI-SS-n23"/>
+                            <constraint firstItem="lN6-ma-uah" firstAttribute="trailing" secondItem="tFg-wK-geu" secondAttribute="trailing" constant="20" id="eqt-dy-u5R"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="lN6-ma-uah"/>
                     </view>
+                    <connections>
+                        <outlet property="body" destination="OK4-as-Q5C" id="Zzo-Dd-1zi"/>
+                        <outlet property="header" destination="tFg-wK-geu" id="aGn-ZA-EyW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dhS-7T-0UY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="138"/>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

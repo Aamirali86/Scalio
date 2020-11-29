@@ -21,7 +21,7 @@ class HomeCoordinator: BaseCoordinator<UINavigationController> {
 
 extension HomeCoordinator: HomeCoordinatorType {
     func navigateToDetailScreen(with element: TestElement) {
-        let viewController = DetailViewBuilder().build()
+        let viewController = DetailViewBuilder(element: element).build()
         rootViewController.pushViewController(viewController, animated: true)
     }
 }

@@ -11,12 +11,12 @@ import RxMoya
 import Moya
 
 protocol TestAPI {
-    func requestTestAPI() -> Observable<Response>
+    func requestTestAPI(with id: Int) -> Observable<Response>
 }
 
 extension MoyaProvider: TestAPI {
-    func requestTestAPI() -> Observable<Response> {
-        let targetType = TestAPIResource(id: 2)
+    func requestTestAPI(with id: Int) -> Observable<Response> {
+        let targetType = TestAPIResource(id: id)
         return self.rx.request(targetType as! Target)
             .asObservable()
     }

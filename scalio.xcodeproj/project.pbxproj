@@ -30,6 +30,7 @@
 		2984A669257412420084CE3F /* TestElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A668257412420084CE3F /* TestElement.swift */; };
 		2984A66B257417870084CE3F /* DetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A66A257417870084CE3F /* DetailViewBuilder.swift */; };
 		2984A66D257417A40084CE3F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2984A66C257417A40084CE3F /* Detail.storyboard */; };
+		2984A66F257454240084CE3F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A66E257454240084CE3F /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		2984A668257412420084CE3F /* TestElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElement.swift; sourceTree = "<group>"; };
 		2984A66A257417870084CE3F /* DetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewBuilder.swift; sourceTree = "<group>"; };
 		2984A66C257417A40084CE3F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		2984A66E257454240084CE3F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,6 +181,7 @@
 				2984A64825711FFC0084CE3F /* DetailViewController.swift */,
 				2984A66A257417870084CE3F /* DetailViewBuilder.swift */,
 				2984A66C257417A40084CE3F /* Detail.storyboard */,
+				2984A66E257454240084CE3F /* DetailViewModel.swift */,
 			);
 			path = Detail;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				2984A662257407D00084CE3F /* TestAPIResource.swift in Sources */,
 				2984A66425740ADE0084CE3F /* Moya+API.swift in Sources */,
 				2984A64925711FFC0084CE3F /* DetailViewController.swift in Sources */,
+				2984A66F257454240084CE3F /* DetailViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

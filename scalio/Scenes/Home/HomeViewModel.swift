@@ -12,7 +12,7 @@ import RxCocoa
 
 protocol HomeViewModelType {
     var isLoading: Driver<Bool> { get }
-    func fetchData()
+    func fetchData(with id: Int)
 }
 
 class HomeViewModel: HomeViewModelType {
@@ -37,9 +37,9 @@ class HomeViewModel: HomeViewModelType {
         
     //MARK:- Functions
     
-    func fetchData() {
+    func fetchData(with id: Int) {
         _isLoading.onNext(true)
-        service.requestTestAPI()
+        service.requestTestAPI(with: id)
             .filterSuccessfulStatusCodes()
             .map(TestElement.self)
             .subscribe(onNext: { [weak self] element in

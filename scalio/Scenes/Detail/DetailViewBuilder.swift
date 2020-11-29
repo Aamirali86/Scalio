@@ -9,11 +9,18 @@
 import UIKit
 
 class DetailViewBuilder: ViewControllerBuilder {
+    private let element: TestElement
+    
+    init(element: TestElement) {
+        self.element = element
+    }
+    
     func build() -> UIViewController {
         let storyboard = UIStoryboard(name: "Detail", bundle: Bundle.main)
         
+        let viewModel = DetailViewModel(element: element)
         let controller = storyboard.instantiateInitialViewController {
-            DetailViewController(coder: $0)
+            DetailViewController(coder: $0, viewModel: viewModel)
         }
         
         guard let detailViewController = controller else {

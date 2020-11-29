@@ -41,11 +41,22 @@ class HomeViewController: UIViewController {
         setupUI()
         bindViewModel()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = true
+    }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     //MARK:- Actions
     
     @IBAction private func didTapSendButton() {
-        viewModel.fetchData()
+        guard let text = textfield?.text, let id = Int(text) else { return }
+        viewModel.fetchData(with: id)
     }
     
     //MARK:- Private
