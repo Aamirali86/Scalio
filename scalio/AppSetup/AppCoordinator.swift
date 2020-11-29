@@ -24,7 +24,8 @@ final class AppCoordinator: BaseCoordinator<UINavigationController> {
     // MARK: - Override
 
     override func start() {
-        startChild(self)
+        let homeCoordinator = HomeCoordinator(rootViewController: rootViewController)
+        startChild(homeCoordinator)
         window.rootViewController = rootViewController
         window.makeKeyAndVisible()
     }

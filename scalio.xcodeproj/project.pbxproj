@@ -19,6 +19,17 @@
 		2984A64D257125EE0084CE3F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64A257125EE0084CE3F /* Coordinator.swift */; };
 		2984A64E257125EE0084CE3F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64B257125EE0084CE3F /* AppCoordinator.swift */; };
 		2984A64F257125EE0084CE3F /* BaseCoordinaotr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */; };
+		2984A6512571469B0084CE3F /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A6502571469B0084CE3F /* HomeCoordinator.swift */; };
+		2984A654257146DF0084CE3F /* HomeViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A653257146DF0084CE3F /* HomeViewBuilder.swift */; };
+		2984A656257147660084CE3F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A655257147660084CE3F /* HomeViewModel.swift */; };
+		2984A658257147A80084CE3F /* ViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A657257147A80084CE3F /* ViewControllerBuilder.swift */; };
+		2984A65E2573FFB80084CE3F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2984A65D2573FFB80084CE3F /* Home.storyboard */; };
+		2984A662257407D00084CE3F /* TestAPIResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A661257407D00084CE3F /* TestAPIResource.swift */; };
+		2984A66425740ADE0084CE3F /* Moya+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A66325740ADE0084CE3F /* Moya+API.swift */; };
+		2984A66625740DDC0084CE3F /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 2984A66525740DDC0084CE3F /* Moya */; };
+		2984A669257412420084CE3F /* TestElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A668257412420084CE3F /* TestElement.swift */; };
+		2984A66B257417870084CE3F /* DetailViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2984A66A257417870084CE3F /* DetailViewBuilder.swift */; };
+		2984A66D257417A40084CE3F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2984A66C257417A40084CE3F /* Detail.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +57,16 @@
 		2984A64A257125EE0084CE3F /* Coordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		2984A64B257125EE0084CE3F /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinaotr.swift; sourceTree = "<group>"; };
+		2984A6502571469B0084CE3F /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		2984A653257146DF0084CE3F /* HomeViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewBuilder.swift; sourceTree = "<group>"; };
+		2984A655257147660084CE3F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2984A657257147A80084CE3F /* ViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerBuilder.swift; sourceTree = "<group>"; };
+		2984A65D2573FFB80084CE3F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		2984A661257407D00084CE3F /* TestAPIResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAPIResource.swift; sourceTree = "<group>"; };
+		2984A66325740ADE0084CE3F /* Moya+API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Moya+API.swift"; sourceTree = "<group>"; };
+		2984A668257412420084CE3F /* TestElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestElement.swift; sourceTree = "<group>"; };
+		2984A66A257417870084CE3F /* DetailViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewBuilder.swift; sourceTree = "<group>"; };
+		2984A66C257417A40084CE3F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +76,7 @@
 			files = (
 				2984A63A2571188A0084CE3F /* Action in Frameworks */,
 				2984A637257117FD0084CE3F /* RxMoya in Frameworks */,
+				2984A66625740DDC0084CE3F /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +96,7 @@
 				2984A612257112480084CE3F /* scalio */,
 				2984A6292571124A0084CE3F /* scalioTests */,
 				2984A611257112480084CE3F /* Products */,
+				2984A65A25719E150084CE3F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -89,9 +112,10 @@
 		2984A612257112480084CE3F /* scalio */ = {
 			isa = PBXGroup;
 			children = (
+				2984A64025711A3F0084CE3F /* AppSetup */,
+				2984A65F257407AC0084CE3F /* Domain */,
 				2984A64225711A520084CE3F /* Resources */,
 				2984A64125711A4A0084CE3F /* Scenes */,
-				2984A64025711A3F0084CE3F /* AppSetup */,
 			);
 			path = scalio;
 			sourceTree = "<group>";
@@ -113,6 +137,8 @@
 				2984A64B257125EE0084CE3F /* AppCoordinator.swift */,
 				2984A64C257125EE0084CE3F /* BaseCoordinaotr.swift */,
 				2984A64A257125EE0084CE3F /* Coordinator.swift */,
+				2984A6502571469B0084CE3F /* HomeCoordinator.swift */,
+				2984A657257147A80084CE3F /* ViewControllerBuilder.swift */,
 			);
 			path = AppSetup;
 			sourceTree = "<group>";
@@ -140,6 +166,9 @@
 			isa = PBXGroup;
 			children = (
 				2984A64625711FEA0084CE3F /* HomeViewController.swift */,
+				2984A653257146DF0084CE3F /* HomeViewBuilder.swift */,
+				2984A655257147660084CE3F /* HomeViewModel.swift */,
+				2984A65D2573FFB80084CE3F /* Home.storyboard */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -148,8 +177,43 @@
 			isa = PBXGroup;
 			children = (
 				2984A64825711FFC0084CE3F /* DetailViewController.swift */,
+				2984A66A257417870084CE3F /* DetailViewBuilder.swift */,
+				2984A66C257417A40084CE3F /* Detail.storyboard */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		2984A65A25719E150084CE3F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2984A65F257407AC0084CE3F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2984A667257412110084CE3F /* Models */,
+				2984A660257407BB0084CE3F /* ConsumerNetwork */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2984A660257407BB0084CE3F /* ConsumerNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				2984A66325740ADE0084CE3F /* Moya+API.swift */,
+				2984A661257407D00084CE3F /* TestAPIResource.swift */,
+			);
+			path = ConsumerNetwork;
+			sourceTree = "<group>";
+		};
+		2984A667257412110084CE3F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2984A668257412420084CE3F /* TestElement.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +235,7 @@
 			packageProductDependencies = (
 				2984A636257117FD0084CE3F /* RxMoya */,
 				2984A6392571188A0084CE3F /* Action */,
+				2984A66525740DDC0084CE3F /* Moya */,
 			);
 			productName = scalio;
 			productReference = 2984A610257112480084CE3F /* scalio.app */;
@@ -241,8 +306,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2984A65E2573FFB80084CE3F /* Home.storyboard in Resources */,
 				2984A6202571124A0084CE3F /* LaunchScreen.storyboard in Resources */,
 				2984A61D2571124A0084CE3F /* Assets.xcassets in Resources */,
+				2984A66D257417A40084CE3F /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +330,17 @@
 				2984A64E257125EE0084CE3F /* AppCoordinator.swift in Sources */,
 				2984A614257112480084CE3F /* AppDelegate.swift in Sources */,
 				2984A616257112480084CE3F /* SceneDelegate.swift in Sources */,
+				2984A658257147A80084CE3F /* ViewControllerBuilder.swift in Sources */,
+				2984A656257147660084CE3F /* HomeViewModel.swift in Sources */,
 				2984A64F257125EE0084CE3F /* BaseCoordinaotr.swift in Sources */,
+				2984A66B257417870084CE3F /* DetailViewBuilder.swift in Sources */,
+				2984A669257412420084CE3F /* TestElement.swift in Sources */,
 				2984A64D257125EE0084CE3F /* Coordinator.swift in Sources */,
+				2984A6512571469B0084CE3F /* HomeCoordinator.swift in Sources */,
+				2984A654257146DF0084CE3F /* HomeViewBuilder.swift in Sources */,
 				2984A64725711FEA0084CE3F /* HomeViewController.swift in Sources */,
+				2984A662257407D00084CE3F /* TestAPIResource.swift in Sources */,
+				2984A66425740ADE0084CE3F /* Moya+API.swift in Sources */,
 				2984A64925711FFC0084CE3F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,7 +532,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = scalioTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,7 +553,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = scalioTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -553,6 +628,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2984A6382571188A0084CE3F /* XCRemoteSwiftPackageReference "Action" */;
 			productName = Action;
+		};
+		2984A66525740DDC0084CE3F /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2984A635257117FD0084CE3F /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

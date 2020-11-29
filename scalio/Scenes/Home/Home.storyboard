@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pHS-jb-C6m">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="Gad-rS-ICo">
+            <objects>
+                <viewController id="pHS-jb-C6m" customClass="HomeViewController" customModule="scalio" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dq4-IR-LVD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="id" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="475-Yc-joa">
+                                <rect key="frame" x="103.5" y="431" width="207" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anv-ue-2Oh">
+                                <rect key="frame" x="167" y="802" width="80" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Send"/>
+                                <connections>
+                                    <action selector="didTapSendButton" destination="pHS-jb-C6m" eventType="touchUpInside" id="9Rk-cz-QCj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="anv-ue-2Oh" firstAttribute="centerX" secondItem="Dq4-IR-LVD" secondAttribute="centerX" id="1Ix-Gv-lw3"/>
+                            <constraint firstItem="475-Yc-joa" firstAttribute="centerY" secondItem="Dq4-IR-LVD" secondAttribute="centerY" id="2IC-Wa-geJ"/>
+                            <constraint firstItem="HYu-nV-2qG" firstAttribute="bottom" secondItem="anv-ue-2Oh" secondAttribute="bottom" constant="40" id="Cms-Dx-zSN"/>
+                            <constraint firstItem="475-Yc-joa" firstAttribute="centerX" secondItem="Dq4-IR-LVD" secondAttribute="centerX" id="TH5-LV-KSZ"/>
+                            <constraint firstItem="475-Yc-joa" firstAttribute="width" secondItem="Dq4-IR-LVD" secondAttribute="width" multiplier="1:2" id="Uf6-IM-v9J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HYu-nV-2qG"/>
+                    </view>
+                    <connections>
+                        <outlet property="textfield" destination="475-Yc-joa" id="X8w-cs-Vfd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9af-DU-I1h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="23"/>
+        </scene>
+    </scenes>
+</document>
