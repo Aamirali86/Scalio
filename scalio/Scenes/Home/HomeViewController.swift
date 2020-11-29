@@ -7,12 +7,21 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController {
     //MARK:- Properties
     
     let viewModel: HomeViewModelType
+    private let bag = DisposeBag()
     @IBOutlet private var textfield: UITextField!
+    
+    private lazy var loader: UIActivityIndicatorView = {
+        let spinner = UIActivityIndicatorView(style: .large)
+        spinner.color = .lightGray
+        spinner.translatesAutoresizingMaskIntoConstraints = false
+        return spinner
+    }()
 
     //MARK:- Init
     
@@ -30,6 +39,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        bindViewModel()
     }
 
     //MARK:- Actions
@@ -42,5 +52,17 @@ class HomeViewController: UIViewController {
     
     private func setupUI() {
         textfield.keyboardType = .numberPad
+        view.addSubview(loader)
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func bindViewModel() {
+        viewModel
+            .isLoading
+            .drive(loader.rx.isAnimating)
+            .disposed(by: bag)
     }
 }
