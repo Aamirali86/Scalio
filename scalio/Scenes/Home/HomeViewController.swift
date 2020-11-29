@@ -22,6 +22,12 @@ class HomeViewController: UIViewController {
         spinner.translatesAutoresizingMaskIntoConstraints = false
         return spinner
     }()
+    
+    private lazy var alert: UIAlertController = {
+        var alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        return alert
+    }()
 
     //MARK:- Init
     
@@ -74,6 +80,18 @@ class HomeViewController: UIViewController {
         viewModel
             .isLoading
             .drive(loader.rx.isAnimating)
+            .disposed(by: bag)
+        
+        viewModel
+            .errorMessage
+            .drive(alert.rx.title)
+            .disposed(by: bag)
+        
+        viewModel
+            .showAlert
+            .subscribe(onNext: { [unowned self] isShown in
+                self.present(self.alert, animated: true)
+            })
             .disposed(by: bag)
     }
 }

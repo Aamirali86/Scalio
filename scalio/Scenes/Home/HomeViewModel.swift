@@ -12,6 +12,8 @@ import RxCocoa
 
 protocol HomeViewModelType {
     var isLoading: Driver<Bool> { get }
+    var showAlert: Observable<Bool> { get }
+    var errorMessage: Driver<String> { get }
     func fetchData(with id: Int)
 }
 
@@ -22,10 +24,22 @@ class HomeViewModel: HomeViewModelType {
     private let bag = DisposeBag()
     private let coordinator: HomeCoordinatorType
     private let _isLoading = PublishSubject<Bool>()
-    
+    private let _errorMessage = PublishSubject<String>()
+    private let _showAlert = PublishSubject<Bool>()
+
     var isLoading: Driver<Bool> {
         _isLoading
             .asDriver(onErrorJustReturn: false)
+    }
+    
+    var showAlert: Observable<Bool> {
+        _showAlert
+            .asObservable()
+    }
+    
+    var errorMessage: Driver<String> {
+        _errorMessage
+            .asDriver(onErrorJustReturn: "Unknown error")
     }
 
     //MARK:- Init
@@ -34,7 +48,7 @@ class HomeViewModel: HomeViewModelType {
         self.service = service
         self.coordinator = coordinator
     }
-        
+    
     //MARK:- Functions
     
     func fetchData(with id: Int) {
@@ -45,8 +59,11 @@ class HomeViewModel: HomeViewModelType {
             .subscribe(onNext: { [weak self] element in
                 self?.coordinator.navigateToDetailScreen(with: element)
                 self?._isLoading.onNext(false)
+            }, onError: { [weak self] error in
+                self?._isLoading.onNext(false)
+                self?._errorMessage.onNext(error.localizedDescription)
+                self?._showAlert.onNext(true)
             })
             .disposed(by: bag)
     }
-    
 }
