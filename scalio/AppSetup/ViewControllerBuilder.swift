@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// `ViewControllerBuilder` is responsible to create view controllers.
 protocol ViewControllerBuilder {
     func build() -> UIViewController
 }

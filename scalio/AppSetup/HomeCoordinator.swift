@@ -12,6 +12,7 @@ protocol HomeCoordinatorType: class {
     func navigateToDetailScreen(with element: TestElement)
 }
 
+/// `HomeCoordinator` is responsible to manage transition for home flow.
 class HomeCoordinator: BaseCoordinator<UINavigationController> {
     override func start() {
         let viewController = HomeViewBuilder(coordinator: self).build()

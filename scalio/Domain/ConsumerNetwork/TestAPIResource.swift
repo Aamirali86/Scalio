@@ -9,12 +9,17 @@
 import Foundation
 import Moya
 
+/// `TestAPIResource` is a wrapper to create URLRequest
 class TestAPIResource: TargetType {
     private let id: Int
+    
+    //MARK:- Init
     
     init(id: Int) {
         self.id = id
     }
+    
+    //MARK:- Properties
     
     var baseURL: URL {
         URL(string: "https://jsonplaceholder.typicode.com/posts/")!

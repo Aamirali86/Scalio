@@ -10,6 +10,7 @@ import RxSwift
 import RxMoya
 import Moya
 
+/// `TestAPI` is a wrapper over Moya provider.
 protocol TestAPI {
     func requestTestAPI(with id: Int) -> Observable<Response>
 }
